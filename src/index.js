@@ -1,14 +1,14 @@
 const express = require('express');
 
-require('dotenv').config();
+const {PORT} = require('./config/serverConfig')
 
 const setupAndStartServer = async () => {
    
     // Create express object
     const app = express();
 
-    app.listen(process.env.PORT, () => {
-        console.log(`Server started at ${process.env.PORT}`);
+    app.listen(PORT, () => {
+        console.log(`Server started at ${PORT}`);
     });
 }
 
